@@ -13,7 +13,7 @@ char* helloWebAssembly() {
 
 This function will give us a pointer to a char buffer containing the `Hello WebAssembly` string. This buffer will be in the shared linear memory between WASM and JS.
 
-Put it in WebAssembly Explorer, select C89 or C99 formats, and click on *Compile*. 
+Put it in [WebAssembly Explorer](https://mbebenita.github.io/WasmExplorer/), select C89 or C99 formats, and click on *Compile*. 
 
 ![Hello WebAssembly in C](./img/webassembly-explorer-02.png)
 
@@ -37,7 +37,7 @@ The WAT is an human-readable version of the WASM code, where you can see the sta
 
 In your code you declared a `helloWebAssembly()` function, in WASM this function is exported (in the `(export "helloWebAssembly" (func $helloWebAssembly))` line) and made available to use in your JS environment.
 
-Download the WASM file (rename it as HelloWebAssembly.wasm), and put it in your `app/HelloWebAssembly` folder.
+Download the WASM file (rename it as `HelloWebAssembly.wasm`), and put it in your `app/HelloWebAssembly` folder.
 
 
 ## Loading your WASM code
@@ -146,7 +146,7 @@ async function loadWASM() {
 }
 ```
 
-Aand then, at the end of the file, we simply call `loadWASM()` to launch the process:
+And then, at the end of the file, we simply call `loadWASM()` to launch the process:
 
 ```js
 loadWASM();
@@ -200,3 +200,5 @@ So now, in your `HelloWebAssembly.html` file, you can simply load the `HelloWebA
 ```html
 <script src='./HelloWebAssembly.js'></script>
 ```
+
+And if you look at the console, you will see the `Hello WebAssembly` message showing that the WASM was correctly loaded and called and that the message was passed in the shared memory.
