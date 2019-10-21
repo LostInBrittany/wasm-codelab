@@ -58,3 +58,8 @@ The UI should look like:
 
 ![Some more functions](./img/LetsDoSomeMaths-05.png)
 
+You will need to code the C functions for every operation (you can put them all together in the same source file), update the WASM, and get the exported WASM functions exposed in the JS. Then some click listeners in the HTML and you will be done..
+
+## Conclusion
+
+In the [next step](./step-03) we will see how we can deal with data not belonging to those basic types. We will see how we can use the shared memory between WASM and JS to communicate data between them.
