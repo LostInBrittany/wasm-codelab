@@ -6,8 +6,8 @@ canvas.width = boundingClientRect.width | 0;
 canvas.height = boundingClientRect.height | 0;
 
 // Compute the size of the universe (here: 2px per cell)
-const width = boundingClientRect.width >>> 1;
-const height = boundingClientRect.height >>> 1;
+const width = boundingClientRect.width >>> 1; // == boundingClientRect.width / 2
+const height = boundingClientRect.height >>> 1; // == boundingClientRect.height /2
 const size = width * height; // memory required to store either input or output
 const totalMemoryRequired = size + size; // total memory required to store input and output
 
@@ -16,13 +16,15 @@ const numberPages = ((totalMemoryRequired + 0xffff) & ~0xffff) >>> 16; // aligne
 const wasmMemory = new WebAssembly.Memory({ initial: numberPages });
 
 // Fetch and instantiate the module
-WebAssembly.instantiateStreaming(fetch('../out/main.wasm'), {
-  env: { memory: wasmMemory }
-})
-  .then(initGame)
-  .catch(err => {
-    throw err;
-  });
+async function loadAndInstantiate() {
+  let response = await fetch('../out/main.wasm');
+  let arrayBuffer = await response.arrayBuffer();
+  let wasmModule = await WebAssembly.instantiate(arrayBuffer, 
+      { env: { memory: wasmMemory } });
+  initGame(wasmModule);
+}
+
+loadAndInstantiate();
 
 // Executed when the WASM module is instantiated
 function initGame(module) {

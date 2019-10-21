@@ -37,6 +37,9 @@ In the `main.html`, add a `canvas` element, that will be the *board* for the Gam
 </html>
 ```
 
+
+![WebAssembly Studio](./img/webassembly-studio-02.png)
+
 ## Game of Life, AssemblyScript style
 
 The Game of Life is one of the most implemented algorithms, you can find implementation in most languages. In the AssemblyScript repository, we can find a [clean and simple implementation](https://github.com/carlosbaraza/wasm-game-of-life/blob/master/assembly/main.ts).
@@ -99,11 +102,11 @@ canvas.width = boundingClientRect.width | 0;
 canvas.height = boundingClientRect.height | 0;
 ```
 
-Now we define the size of our gaming universe. Let's begin with something simple, a 100x100 grid.
+Now we define the size of our gaming universe. Let's begin with something simple, a *cell* size of 2px by 2px.
 
 ```js
-const width = 100;
-const height = 100;
+const width = boundingClientRect.width >>> 1; // == boundingClientRect.width / 2
+const height = boundingClientRect.height >>> 1; // == boundingClientRect.height /2
 const size = width * height; // memory required to store either input or output
 const totalMemoryRequired = size + size; // total memory required to store input and output
 ```
@@ -195,3 +198,62 @@ The `render()` is a simplist and awfully underperformant function to read the me
 We need to include the flag `--importMemory` in the  `asc.main()` as we want to have access to the `WebAssembly.Memory` object within the JS orchestrator.
 
 ## Build an run
+
+Build and run the project on WebAssembly Studio to see your Game of Life in action
+
+![Build and run](./img/webassembly-studio-03.png)
+
+
+## Download and run it in local
+
+As we did in the precedent step, we are going to download the WebAssembly project to run it in local.
+
+### Add the demo to the global index
+
+Edit `app/index.html` to add the Game of Life demo:
+
+```html
+
+        <li>
+            <a href="./GameOfLife/src/main.html">
+                Game of Life in AssemblyScript 
+            </a>
+        </li>
+```
+
+![Demo index](./img/demo-index-01.png)
+
+### Download and extract the code
+
+Download the zip file with your WebAssembly Studio project and decompress in in `app/GameOfLife` folder.
+
+Now everything should work, in a perfect world. But if you go to
+`app/GameOfLife/src/main.html`, you will see that the WASM isn't loaded,
+and you will have a rather cryptic message on the console:
+
+```log
+main.html:1 Uncaught (in promise) TypeError: Failed to execute 'compile' on 'WebAssembly': Incorrect response MIME type. Expected 'application/wasm'.
+```
+
+The problem here is that Chrome expects that files loaded with `WebAssembly.instantiateStreaming()` arrive with the `application/wasm` MIME type, and your local Python or NodeJS server doesn't sets this type.
+
+A solution is to modify the instatiation as we did in the first examples:
+
+
+```js
+// Fetch and instantiate the module
+async function loadAndInstantiate() {
+    let response = await fetch('../out/main.wasm');
+    let arrayBuffer = await response.arrayBuffer();
+    let wasmModule = await WebAssembly.instantiate(arrayBuffer, 
+        { env: { memory: wasmMemory } });
+    initGame();
+}
+loadAndInstantiate(wasmModule);
+```
+
+And then the instantiation works as intended, and you have your Game of Life running locally:
+
+![Game of Life running locally](./img/game-of-life-01.png)
+
+
