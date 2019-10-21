@@ -1,4 +1,4 @@
-#  DevFest Nantes 2019 WebAssembly Codelab - Step 2 - Hello WebAssembly
+#  DevFest Nantes 2019 WebAssembly Codelab - Step 03 - Hello WebAssembly
 
 In this step we are going to add the first demo, *Hello WebAssembly*, our version of the Hello World.
 
