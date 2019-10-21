@@ -39,7 +39,7 @@ In the `main.html`, add a `canvas` element, that will be the *board* for the Gam
 
 ## Game of Life, AssemblyScript style
 
-The Game of Life is one of the most implemented algorythms, you can find implementation in most languages. In the AssemblyScript repository, we can find a [clean and simple implementation](https://github.com/carlosbaraza/wasm-game-of-life/blob/master/assembly/main.ts).
+The Game of Life is one of the most implemented algorithms, you can find implementation in most languages. In the AssemblyScript repository, we can find a [clean and simple implementation](https://github.com/carlosbaraza/wasm-game-of-life/blob/master/assembly/main.ts).
 
 
 > ### The Gsame of Life
@@ -50,7 +50,7 @@ of two possible states, alive or dead.
 >
 > Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent.
 >
-> At every step of the algorythm, all the *cells* are scanned. 
+> At every step of the algorithm, all the *cells* are scanned. 
 > - A live *cell* with fewer than 2 live neighbors dies, as if caused by underpopulation. 
 > - A live *cell* with more than 3 live neighbors dies, as if by overpopulation.
 > - A live *cell* with 2 or 3 live neighbors lives on to the next generation.
