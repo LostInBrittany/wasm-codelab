@@ -192,7 +192,7 @@ The all with a very minimalist layout (this isn't a CSS lab after all... 😉)
     <div class="row">
         <button id="doublerBtn">x2</button>
     </div>
-    <div id="doublerResult" class="row"></div>
+    <div id="result" class="row"></div>
 </body>
 </html>
 ```
