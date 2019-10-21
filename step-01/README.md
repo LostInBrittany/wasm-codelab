@@ -1,4 +1,4 @@
-#  DevFest Nantes 2019 WebAssembly Codelab - Step 02 - Let's do some maths
+#  DevFest Nantes 2019 WebAssembly Codelab - Step 01 - Let's do some maths
 
 This is the initial step of the tutorial. In this step we will define some simple math functions in C, we will compile it in WASM and we will call them from JS.
 
@@ -229,4 +229,10 @@ Now your *x2* button should work as intended:
 
 
 ![Let's do some maths - Doubler](./img/LetsDoSomeMaths-01.png)
+
+
+## Conclusion
+
+We have done our first WASM function, let's play a bit with it now...
+In the next step you will see how typing works on WASM.
 
