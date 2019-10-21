@@ -49,3 +49,26 @@ There are two main files in the project:
 
 ![Hello World in C with WebAssembly Studio](./img/webassembly-studio-02.png)
 
+
+## Download and add to the demo suite
+
+You can download the whole project from WebAssembly Studio and execute it in your local project.
+
+Modify your `app/index.html` file to add the new demo:
+
+```html
+    <li>
+        <a href="./WebAssemblyStudioHelloWorld/src/main.html">
+            Hello World with WebAssembly Studio 
+        </a>
+    </li>
+```
+
+And you have the new demo:
+
+![Hello World in C with WebAssembly Studio in local mode](./img/webassembly-studio-03.png)
+
+
+## Conclusion
+
+In the [next step](../step-05/) you are going to use WebAssembly Studio to compile an existing library, an AssemblyScript implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).

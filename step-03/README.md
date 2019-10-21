@@ -203,3 +203,7 @@ So now, in your `HelloWebAssembly.html` file, you can simply load the `HelloWebA
 ```
 
 And if you look at the console, you will see the `Hello WebAssembly` message showing that the WASM was correctly loaded and called and that the message was passed in the shared memory.
+
+## Conclusion
+
+In the [next step](../step-04/) we are going to use an online IDE for WASM, WebAssembly Studio. We will begin by redoing the Hello WebAssembly, but this time using the `printf()` C function and its POSIX calls...
