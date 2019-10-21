@@ -228,5 +228,5 @@ In order to do that, we place an `onclick` listener on the button, and we call a
 Now your *x2* button should work as intended:
 
 
-![Let's do some maths - Doubler](./img/letsdosomemaths-01.png)
+![Let's do some maths - Doubler](./img/LetsDoSomeMaths-01.png)
 

@@ -1,6 +1,6 @@
 # DevFest Nantes 2019 WebAssembly Codelab
 
-We have built this [WebAssembly Codelab](https://github.com/LostInBrittany/wasm-devfestnantes-2019) as a quick entry point to [WebAssembly](https://webassembly.org/). 
+We have built this [WebAssembly Codelab](https://github.com/LostInBrittany/wasm-codelab) as a quick entry point to [WebAssembly](https://webassembly.org/). 
 
 
 ## What are the objectives of this tutorial
@@ -35,14 +35,14 @@ If not, you can use [NodeJS](http://nodejs.org). We have put a minimalist JavaSc
 
 We have structured the project to allow a *git-less* use. The `app` directory is the main directory of the project, the working folder where you will put your code.. The tutorial is divided in steps, each one in its own directory:
 
-1. [Hello WebAssembly](./step-01/)
-1. [Let's do some maths...](./step-02/)
+1. [Let's do some maths...](./step-01/)
+1. [Hello WebAssembly](./step-02/)
 
 In each step directory you have a README file that explain the objective of the step, that you will do in the working directory `app`. If you have problems or if you get lost, you also have the solution of each step in the step directories. So if you want to see the intended result of  the 2nd step, you can point your browser to http://localhost:8000/step-02/index.html
 
 
 ## What should I do now?  
 
-OK, now you're ready to follow this tutorial. If you're familiar with git, begin by cloning this repository (`git clone https://github.com/LostInBrittany/lit-element-beers`), else you can simply download the zipped file from [GitHub](https://github.com/LostInBrittany/wasm-devfestnantes-2019/archive/master.zip).
+OK, now you're ready to follow this tutorial. If you're familiar with git, begin by cloning this repository (`git clone https://github.com/LostInBrittany/wasm-codelab`), else you can simply download the zipped file from [GitHub](https://github.com/LostInBrittany/wasm-codelab/archive/master.zip).
 
 Now can go to [step-01](./step-01) and begin to follow the README of that step. Let's begin!
