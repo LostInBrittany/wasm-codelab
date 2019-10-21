@@ -122,7 +122,7 @@ And now we ask the browser to instantiate this ArrayBuffer as a WASM module, usi
 As now we have an instantiated WASM module, we can look for the exported `doubler()` function.
 
 ```js
-    doubler = await  wasmModule.instance.exports.helloWebAssembly;
+    doubler = await  wasmModule.instance.exports.doubler;
 ```
 
 And then, at the end of the file, we simply call `loadWASM()` to launch the process:
@@ -142,7 +142,7 @@ async function loadWASM() {
     let response = await fetch('./LetsDoSomeMaths.wasm');
     let arrayBuffer = await response.arrayBuffer();
     let wasmModule = await WebAssembly.instantiate(arrayBuffer, configurationObject);
-    doubler = await  wasmModule.instance.exports.helloWebAssembly;
+    doubler = await  wasmModule.instance.exports.doubler;
 }
 
 loadWASM();
