@@ -62,4 +62,4 @@ You will need to code the C functions for every operation (you can put them all 
 
 ## Conclusion
 
-In the [next step](./step-03) we will see how we can deal with data not belonging to those basic types. We will see how we can use the shared memory between WASM and JS to communicate data between them.
+In the [next step](../step-03) we will see how we can deal with data not belonging to those basic types. We will see how we can use the shared memory between WASM and JS to communicate data between them.
