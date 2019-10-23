@@ -163,7 +163,7 @@ In `app/index.html`, we add a pointer to this first demo:
     </ul>
 ```
 
-Now we cat create a `LetsDoSomeMath.html` file in the `app/LetDoSomeMath` folder, and add some UI elements:
+Now we cat create a `LetsDoSomeMaths.html` file in the `app/LetDoSomeMaths` folder, and add some UI elements:
 
 - An input field
 - A *x2* button that will call the `doubler` function
