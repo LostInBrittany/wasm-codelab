@@ -234,4 +234,4 @@ Now your *x2* button should work as intended:
 ## Conclusion
 
 We have done our first WASM function, let's play a bit with it now...
-In the [next step](./step-02) you will see how typing works on WASM.
+In the [next step](../step-02) you will see how typing works on WASM.
