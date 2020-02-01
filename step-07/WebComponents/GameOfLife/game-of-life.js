@@ -11,13 +11,12 @@ class GameOfLife extends LitElement {
 
   static get styles() { 
     return css`
+      :host {
+        display: inline-block;
+      }
       .board {
-        width: 300px;
-        height: 300px;
+        display: inline-block;
         margin: 10px;
-        padding: 10px;
-        border: solid 1px black;
-        border-radius: 10px;
       }
     `;
   }
@@ -49,10 +48,10 @@ class GameOfLife extends LitElement {
      * and we define a cellule size of 2px
      */ 
     canvas.width = ( this.boardWidth * 2 );
-    canvas.height = ( this.boardWidth * 2 );
+    canvas.height = ( this.boardHeight * 2 );
 
     // memory required to store either input or output
-    this.size = this.boardWidth * this.boardWidth;
+    this.size = this.boardWidth * this.boardHeight;
     
     // total memory required to store input and output
     this.totalMemoryRequired = this.size + this.size; 
@@ -85,7 +84,7 @@ class GameOfLife extends LitElement {
       this.linearMemory[y * this.boardWidth + x] = Math.random() > 0.1 ? 0 : 1;
   
     // Update about 30 times a second
-    const desiredFps = 30;
+    const desiredFps = 10;
     this.frameDuration = 1000 / desiredFps;  
     this.updateCanvas();
     this.renderCanvas();
@@ -116,7 +115,6 @@ class GameOfLife extends LitElement {
 
   render() {
     return html`
-      <h3>Is life a game?</h3>
       <div class="board">
         <canvas id="game"></canvas>
       </div>

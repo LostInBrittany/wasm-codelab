@@ -19,7 +19,6 @@ Let's begin by adding the canvas to the rendering function:
 ```js
   render() {
     return html`
-      <h3>Is life a game?</h3>
       <div class="board">
         <canvas id="game"></canvas>
       </div>
@@ -66,10 +65,10 @@ In the precedent step we added two properties to the element, `boardWidth` and `
      * and we define a cellule size of 2px
      */ 
     canvas.width = ( this.boardWidth * 2 );
-    canvas.height = ( this.boardWidth * 2 );
+    canvas.height = ( this.boardHeight * 2 );
 
     // memory required to store either input or output
-    this.size = this.boardWidth * this.boardWidth;
+    this.size = this.boardWidth * this.boardHeight;
     
     // total memory required to store input and output
     this.totalMemoryRequired = this.size + this.size; 
@@ -164,6 +163,54 @@ And the `renderCanvas` will simply update the canvas at the maximum animation ra
     requestAnimationFrame(this.renderCanvas.bind(this));
   }
 ```
+
+### Clean the style
+
+Let's make the custom element look smarter by modifying the `style` static function:
+
+```js
+  static get styles() { 
+    return css`
+      .board {
+        display: inline-block;
+        margin: 10px;
+      }
+    `;
+  }
+```
+
+## Using the custom element
+
+Now we can at last see the benefits of creating the custom element to encapsulate the WebAssembly: it can be integrated in any web application (or simple website) as simply as any other HTML tag.
+
+Let's add some of them to our page, on `index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+    <title>JFokus 2020 WebAssembly Codelab - WebAssembly ❤️ Web Components - Part I</title>
+    <script type="module" src="./GameOfLife/game-of-life.js"></script>
+</head>
+<body>
+    <h1>JFokus 2020 WebAssembly Codelab</h1>
+    <h2>WebAssembly ❤️ Web Components - Part I</h2>
+
+    <game-of-life></game-of-life>
+   
+    <game-of-life boardWidth="150"></game-of-life>
+
+    <game-of-life boardHeight="150"></game-of-life>
+
+    <game-of-life boardWidth="150" boardHeight="150"></game-of-life>
+
+</body>
+</html>
+```
+
+![](./img/web-component-03.png)
 
 
 
