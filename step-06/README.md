@@ -1,6 +1,9 @@
 #  JFokus 2020 WebAssembly Codelab - Step 06 - WebAssembly ❤️ Web Components - Part I
 
-In this step we will use [Web Components](https://www.webcomponents.org/) to encapsulate the Wasm file and the associated JavaScript into a [custom element](https://html.spec.whatwg.org/multipage/custom-elements.html) easy and painless to use in any JS framework... or without any framework at all.
+In the two following steps, you will use [Web Components](https://www.webcomponents.org/) to encapsulate the Wasm file and the associated JavaScript into a [custom element](https://html.spec.whatwg.org/multipage/custom-elements.html) easy and painless to use in any JS framework... or without any framework at all.
+
+In this part I, you will begin by creating a web component using using one of the most popular web components library, [Lit Element](https://lit-element.polymer-project.org/).
+
 
 ## Hiding the complexity
 
@@ -8,15 +11,16 @@ Until this step, using your Wasm modules in a JS application (independently of t
 
 It would be nice if there was a way to hide this complexity, making the Wasm module as simple to use as a HTML tag. Well, it happens to exist a web standard to do just that: the [Custom Element](https://html.spec.whatwg.org/multipage/custom-elements.html), a part of the Web Components family.
 
+
 ## Using a library because syntactic sugar is sweet
 
 We could do this step of the codelab using directly the standardised custom elements, and it would work nicely. But the Custom Elements standard is a low level one, and we would need to code some boilerplate to make it work. In fact, most developers don't use directly the standard to code their web components, they use one of the dozen of web components libraries. Those libraries add (different and often opinionated) *syntactic sugar* to avoid the need to write trhe boilerplate and give you a DX aligned with your tastes.
 
-For this step e are using one of the most popular web components library, [Lit Element]().
-
+For this step you are using one of the most popular web components library, [Lit Element](https://lit-element.polymer-project.org/).
 
 Let's start from the Conway's Game of Life example in the [precedent step](../step-05/).
 We are going to create a `&lt;game-of-life&gt;` custom element to encapsulate the Wasm module and the associated JavaScript, and be able to include it easily in any web application (or in a simple web page).
+
 
 ## Creating the &lt;game-of-life&gt; element
 
@@ -72,6 +76,7 @@ added 212 packages from 159 contributors and audited 1717 packages in 29.764s
 found 0 vulnerabilities
 
 </code></pre>
+
 
 ### Use *Snowpack* to make the elements ready for the browser
 
@@ -136,7 +141,6 @@ class GameOfLife { }
  */
 customElements.define();
 ```
-
 
 Now we are going to complete the element definition:
 
@@ -291,7 +295,6 @@ In our case we need two properties, `boardWidth` and `boardHeight`, to define th
     ```
 
 You will get (lots of) more details on custom element definition on further steps, by now this should be enough.
-
 
 ![](./img/web-component-02.png)
 
