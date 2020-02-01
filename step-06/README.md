@@ -26,6 +26,7 @@ We are going to create a `&lt;game-of-life&gt;` custom element to encapsulate th
 
 Let's begin by creating our first LitElement, a very simple `game-of-life`. By doing it you will see how easily you can add LitElement widgets to your normal web applications.
 
+Create a new project folder, called `WebComponents` where you will put all the code of this step and the next one.
 
 ### Dependencies
 
@@ -110,7 +111,7 @@ You can get more info at the official [Snowpack website](https://www.snowpack.de
 
 ### The custom element
 
-We are adding a custom `game-of-life` LitElement element that will be stored in the `elements` folder.
+We are adding a custom `game-of-life` LitElement element that will be stored in the `GameOfLife` folder.
 
 LitElement allows us to quickly define and declare custom elements. Custom elements provide a component model for the web. The custom elements specification provides:
 
@@ -122,7 +123,7 @@ Put together, these features let you build an element with its own public API th
 
 By specification, the custom element's name must start with a lower-case ASCII letter and must contain a dash (`-`).
 
-You're going to define your first element, `game-of-life`. Let's begin by creating a `game-of-life.js` file in the `elements` folder: 
+You're going to define your first element, `game-of-life`. Let's begin by creating a `game-of-life.js` file in the `GameOfLife` folder: 
 
 ```js
 /**
@@ -208,7 +209,7 @@ The element should be working now. Test it by adding it to `index.html` file and
 1. Load the element definition with:
 
     ```html
-    <script type="module" src="./elements/game-of-life.js"></script>
+    <script type="module" src="./GameOfLife/game-of-life.js"></script>
     ```
 
 1. And then add it to the page. LitElement components are added to a page with simple HTML tags, like this:
