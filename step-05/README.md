@@ -45,7 +45,7 @@ In the `main.html`, add a `canvas` element, that will be the *board* for the Gam
 The Game of Life is one of the most implemented algorithms, you can find implementation in most languages. In the AssemblyScript repository, we can find a [clean and simple implementation](https://github.com/carlosbaraza/wasm-game-of-life/blob/master/assembly/main.ts).
 
 
-> ### The Gsame of Life
+> ### The Game of Life
 > 
 > The universe of the Game of Life is an infinite two-dimensional
 orthogonal *board* composed of square *cells*, each of which is in one

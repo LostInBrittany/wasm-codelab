@@ -163,7 +163,7 @@ In `app/index.html`, we add a pointer to this first demo:
     </ul>
 ```
 
-Now we cat create a `LetsDoSomeMath.html` file in the `app/LetDoSomeMath` folder, and add some UI elements:
+Now we cat create a `LetsDoSomeMaths.html` file in the `app/LetDoSomeMaths` folder, and add some UI elements:
 
 - An input field
 - A *x2* button that will call the `doubler` function
@@ -234,4 +234,4 @@ Now your *x2* button should work as intended:
 ## Conclusion
 
 We have done our first WASM function, let's play a bit with it now...
-In the [next step](./step-02) you will see how typing works on WASM.
+In the [next step](../step-02) you will see how typing works on WASM.
