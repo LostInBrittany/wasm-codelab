@@ -35,8 +35,8 @@ class GameOfLife extends LitElement {
 
   constructor() {
     super();
-    this.boardWidth = 0;  
-    this.boardHeight = 0;
+    this.boardWidth = 100;  
+    this.boardHeight = 100;
   }
 
   render() {

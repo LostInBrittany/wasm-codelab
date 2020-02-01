@@ -1,22 +1,22 @@
 #  JFokus 2020 WebAssembly Codelab - Step 06 - WebAssembly ❤️ Web Components - Part I
 
-In the two following steps, you will use [Web Components](https://www.webcomponents.org/) to encapsulate the Wasm file and the associated JavaScript into a [custom element](https://html.spec.whatwg.org/multipage/custom-elements.html) easy and painless to use in any JS framework... or without any framework at all.
+In the two following steps, we will use [Web Components](https://www.webcomponents.org/) to encapsulate the Wasm file and the associated JavaScript into a [custom element](https://html.spec.whatwg.org/multipage/custom-elements.html) easy and painless to use in any JS framework... or without any framework at all.
 
-In this part I, you will begin by creating a web component using using one of the most popular web components library, [Lit Element](https://lit-element.polymer-project.org/).
+In this part I, we will begin by creating a web component using using one of the most popular web components library, [Lit Element](https://lit-element.polymer-project.org/).
 
 
 ## Hiding the complexity
 
-Until this step, using your Wasm modules in a JS application (independently of the framework) was rather cumblesome: first you needed to load the JS module that would instantiate the Wasm module and expose its functions, then you had to call the those functions. This less than satisfying developer experience (DX) is often cited as one of the points that damage Wasm adoption.
+Until this step, using our Wasm modules in a JS application (independently of the framework) was rather cumblesome: first we needed to load the JS module that would instantiate the Wasm module and expose its functions, then we had to call the those functions. This less than satisfying developer experience (DX) is often cited as one of the points that damage Wasm adoption.
 
 It would be nice if there was a way to hide this complexity, making the Wasm module as simple to use as a HTML tag. Well, it happens to exist a web standard to do just that: the [Custom Element](https://html.spec.whatwg.org/multipage/custom-elements.html), a part of the Web Components family.
 
 
 ## Using a library because syntactic sugar is sweet
 
-We could do this step of the codelab using directly the standardised custom elements, and it would work nicely. But the Custom Elements standard is a low level one, and we would need to code some boilerplate to make it work. In fact, most developers don't use directly the standard to code their web components, they use one of the dozen of web components libraries. Those libraries add (different and often opinionated) *syntactic sugar* to avoid the need to write trhe boilerplate and give you a DX aligned with your tastes.
+We could do this step of the codelab using directly the standardised custom elements, and it would work nicely. But the Custom Elements standard is a low level one, and we would need to code some boilerplate to make it work. In fact, most developers don't use directly the standard to code their web components, they use one of the dozen of web components libraries. Those libraries add (different and often opinionated) *syntactic sugar* to avoid the need to write the boilerplate and give you a DX aligned with your tastes.
 
-For this step you are using one of the most popular web components library, [Lit Element](https://lit-element.polymer-project.org/).
+For this step we are using one of the most popular web components library, [Lit Element](https://lit-element.polymer-project.org/).
 
 Let's start from the Conway's Game of Life example in the [precedent step](../step-05/).
 We are going to create a `&lt;game-of-life&gt;` custom element to encapsulate the Wasm module and the associated JavaScript, and be able to include it easily in any web application (or in a simple web page).
@@ -26,7 +26,7 @@ We are going to create a `&lt;game-of-life&gt;` custom element to encapsulate th
 
 Let's begin by creating our first LitElement, a very simple `game-of-life`. By doing it you will see how easily you can add LitElement widgets to your normal web applications.
 
-Create a new project folder, called `WebComponents` where you will put all the code of this step and the next one.
+Create a new project folder, called `WebComponents` where we will put all the code of this step and the next one.
 
 ### Dependencies
 
@@ -55,10 +55,10 @@ npm install lit-element
 npm install --save-dev snowpack
 ```
 
-You should get something like:
+We should get something like:
 
 <pre style="background-color: #fee;"><code>s$ npm install lit-element
-npm notice created a lockfile as package-lock.json. You should commit this file.
+npm notice created a lockfile as package-lock.json. We should commit this file.
 
 + lit-element@2.2.1
 added 2 packages from 1 contributor and audited 2 packages in 2.533s
@@ -81,10 +81,10 @@ found 0 vulnerabilities
 
 ### Use *Snowpack* to make the elements ready for the browser
 
-In a production application, you should use tools like [webpack](https://webpack.js.org/) or [Rollup](https://rollupjs.org/). But in a development setting, using those tools make things considerably more complicated. 
+In a production application, we should use tools like [webpack](https://webpack.js.org/) or [Rollup](https://rollupjs.org/). But in a development setting, using those tools make things considerably more complicated. 
 We are using an alternative, [snowpack](https://github.com/pikapkg/snowpack), to run npm dependencies directly in the browser. No Rollup, Webpack or import maps required. 
 
-*Snowpack* installs npm packages as single `.js` files to a new web_modules/ directory. If your dependency exports an ES "module" entrypoint in its package.json manifest, it is supported. Even if it internally depends on other npm packages (even legacy `Common.js` packages) *Snowpack* should be able to handle it.
+*Snowpack* installs npm packages as single `.js` files to a new web_modules/ directory. If a dependency exports an ES "module" entrypoint in its package.json manifest, it is supported. Even if it internally depends on other npm packages (even legacy `Common.js` packages) *Snowpack* should be able to handle it.
 
 > **Note ⚠️**
 >
@@ -98,13 +98,13 @@ We are using an alternative, [snowpack](https://github.com/pikapkg/snowpack), to
 >
 
 
-Now run *Snowpack* in your project:
+Now run *Snowpack* in our project:
 
 ```bash
 npx snowpack
 ```
 
-It will create a browser ready version of LitElement class file on `web_modules` folder, `web_modules/lit-element.js`, that can be imported from anywhere in your code.
+It will create a browser ready version of LitElement class file on `web_modules` folder, `web_modules/lit-element.js`, that can be imported from anywhere in our code.
 
 You can get more info at the official [Snowpack website](https://www.snowpack.dev/).
 
@@ -119,11 +119,11 @@ LitElement allows us to quickly define and declare custom elements. Custom eleme
 - A set of lifecycle callbacks invoked when an instance of the custom element changes state (for example, added or removed from the document).
 - A callback invoked whenever one of a specified set of attributes changes on the instance.
 
-Put together, these features let you build an element with its own public API that reacts to state changes. LitElement provides a set of features on top of the basic custom element specification.
+Put together, these features let we build an element with its own public API that reacts to state changes. LitElement provides a set of features on top of the basic custom element specification.
 
 By specification, the custom element's name must start with a lower-case ASCII letter and must contain a dash (`-`).
 
-You're going to define your first element, `game-of-life`. Let's begin by creating a `game-of-life.js` file in the `GameOfLife` folder: 
+You're going to define our first element, `game-of-life`. Let's begin by creating a `game-of-life.js` file in the `GameOfLife` folder: 
 
 ```js
 /**
@@ -132,7 +132,7 @@ You're going to define your first element, `game-of-life`. Let's begin by creati
 import { } from ''; 
 
 /**
- * TODO: Create a class for your element that extends the LitElement
+ * TODO: Create a class for our element that extends the LitElement
  * base class.
  */
 class GameOfLife { }    
@@ -153,7 +153,7 @@ Now we are going to complete the element definition:
     import { LitElement, html, css } from '../web_modules/lit-element.js';
     ```
 
-1. Create a class for your element that extends the `LitElement` base class.
+1. Create a class for our element that extends the `LitElement` base class.
 
     In `game-of-life.js`, replace the existing class definition with the following code:
 
@@ -167,7 +167,7 @@ Now we are going to complete the element definition:
     }
     ```
 
-    The `render` function defines your component’s template. You must implement `render` for every LitElement component.
+    The `render` function defines our component’s template. We must implement `render` for every LitElement component.
 
 1. Register the new element with the browser.
 
@@ -187,7 +187,7 @@ Here’s the completed code for the element:
 import { LitElement, html, css } from '../web_modules/lit-element.js';
 
 /**
- * Create a class for your element that extends the LitElement
+ * Create a class for our element that extends the LitElement
  * base class.
  */
 class GameOfLife extends LitElement {
@@ -245,21 +245,21 @@ In our case we need two properties, `boardWidth` and `boardHeight`, to define th
 
 1.  Initialize the properties.
 
-    A good place to initialize property values is in your element constructor:
+    A good place to initialize property values is in our element constructor:
 
     ```js
     constructor() {
       super();
-      this.boardWidth = 0;  
-      this.boardHeight = 0;
+      this.boardWidth = 100;  
+      this.boardHeight = 100;
     }
     ```
     The first line of code in the constructor (`super();`) calls the parent class constructor.
 
 
-1.  Add the properties to your template.
+1.  Add the properties to our template.
 
-    You can add properties to your LitElement templates with JavaScript expressions.
+    We can add properties to our LitElement templates with JavaScript expressions.
 
     In `game-of-life`, replace the existing render function with the following code:
 
@@ -295,8 +295,8 @@ In our case we need two properties, `boardWidth` and `boardHeight`, to define th
     }    
     ```
 
-You will get (lots of) more details on custom element definition on further steps, by now this should be enough.
+We will get (lots of) more details on custom element definition on further steps, by now this should be enough.
 
 ![](./img/web-component-02.png)
 
-In the [next step](../step-07/) you are going to use this `game-of`life` web component to encapsulate the Wasm and the asociated JS code you created in [step 05](../step-05/).
+In the [next step](../step-07/) we are going to use this `game-of`life` web component to encapsulate the Wasm and the asociated JS code we created in [step 05](../step-05/).
