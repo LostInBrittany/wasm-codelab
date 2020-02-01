@@ -20,7 +20,7 @@ WASM currently has four available types:
 - f32: 32-bit float
 - f64: 64-bit float
 
-Types from langages compiled to WASM are mapped to these types in a suitable way for each langage. 
+Types from languages compiled to WASM are mapped to these types in a suitable way for each language. 
 
 In JavaScript there aren't types, so some care has to be done to explicitely do the good conversions when dealing with data to/from WASM.
 
