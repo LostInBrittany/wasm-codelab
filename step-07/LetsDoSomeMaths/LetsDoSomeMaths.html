@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+    <title>JFokus 2020 WebAssembly Codelab - Let's do some maths</title>
+    <script src='./LetsDoSomeMaths.js'></script>
+    <style>
+        .row { margin: 16px; display: flex; flex-flow: row; }
+        .row > * { margin-right: 16px;}
+    </style>
+</head>
+<body>
+    <h1>JFokus 2020 WebAssembly Codelab</h1>
+    <h2>Let's do some maths</h2>
+    
+    <div class="row">
+        <input id="input" type="number">
+    </div>
+    <div class="row">
+        <button id="doublerBtn" onclick="callDoubler()">x2</button>
+        <button id="halfBtn" onclick="callHalf()">/2</button>
+        <button id="squareBtn" onclick="callSquare()">^2</button>
+    </div>
+    <div class="row">
+        <input id="inputA" type="number">
+        <input id="inputB" type="number">
+    </div>
+    <div class="row">
+        <button id="addBtn" onclick="callAddition()">+</button>
+        <button id="substractionBtn" onclick="callSubstraction()">-</button>
+        <button id="productBtn" onclick="callProduct()">x</button>       
+        <button id="divisionBtn" onclick="callDivision()">/</button>
+    </div>
+    <div id="result" class="row"></div>
+
+    <script>
+        function callDoubler() {
+            let val = document.getElementById('input').value;
+            let resultValue = doubler(val);
+            let result = document.getElementById('result');
+            result.innerText = resultValue;
+        }
+        function callHalf() {
+            let val = document.getElementById('input').value;
+            let resultValue = half(val);
+            let result = document.getElementById('result');
+            result.innerText = resultValue;
+        }
+        function callSquare() {
+            let val = document.getElementById('input').value;
+            let resultValue = squarer(val);
+            let result = document.getElementById('result');
+            result.innerText = resultValue;
+        }
+        
+        function callAddition() {
+            let a = document.getElementById('inputA').value;
+            let b = document.getElementById('inputB').value;
+            let resultValue = addition(a,b);
+            let result = document.getElementById('result');
+            result.innerText = resultValue;
+        }
+        function callSubstraction() {
+            let a = document.getElementById('inputA').value;
+            let b = document.getElementById('inputB').value;
+            let resultValue = substraction(a,b);
+            let result = document.getElementById('result');
+            result.innerText = resultValue;
+        }
+        function callProduct() {
+            let a = document.getElementById('inputA').value;
+            let b = document.getElementById('inputB').value;
+            let resultValue = product(a,b);
+            let result = document.getElementById('result');
+            result.innerText = resultValue;
+        }
+        function callDivision() {
+            let a = document.getElementById('inputA').value;
+            let b = document.getElementById('inputB').value;
+            let resultValue = division(a,b);
+            let result = document.getElementById('result');
+            result.innerText = resultValue;
+        }
+    </script>
+</body>
+</html>

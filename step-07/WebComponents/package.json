@@ -1,0 +1,17 @@
+{
+    "name": "game-of-life-demo",
+    "version": "1.0.0",
+    "description": "Game of Life Demo - WebAssembly ❤️ Web Components",
+    "main": "index.js",
+    "licence": "",
+    "repository": "",
+    "dependencies": {
+        "lit-element": "^2.2.1"
+    },
+    "devDependencies": {
+        "snowpack": "^1.1.2"
+    },
+    "snowpack": {
+        "dedupe": []
+    }
+}
