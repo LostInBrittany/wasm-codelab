@@ -1,4 +1,4 @@
-#  DevFest Nantes 2019 WebAssembly Codelab - Step 04 - Using WebAssembly Studio - Conway's Game of Life
+#  JFokus 2020 WebAssembly Codelab - Step 04 - Using WebAssembly Studio - Conway's Game of Life
 
 In this step we are building a [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) demo, using an [AssemblyScript](https://github.com/AssemblyScript/assemblyscript) library.
 
@@ -16,7 +16,7 @@ In the `main.html`, add a `canvas` element, that will be the *board* for the Gam
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
-    <title>DevFest Nantes 2019 WebAssembly Codelab - Game of Life</title>
+    <title>JFokus 2020 WebAssembly Codelab - Game of Life</title>
     <style>
       html,
       body {

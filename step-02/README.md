@@ -1,4 +1,4 @@
-#  DevFest Nantes 2019 WebAssembly Codelab - Step 02 - Types, more functions
+#  JFokus 2020 WebAssembly Codelab - Step 02 - Types, more functions
 
 ## Types are important
 

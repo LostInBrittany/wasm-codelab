@@ -1,4 +1,4 @@
-# DevFest Nantes 2019 WebAssembly Codelab
+# JFokus 2020 WebAssembly Codelab
 
 We have built this [WebAssembly Codelab](https://github.com/LostInBrittany/wasm-codelab) as a quick entry point to [WebAssembly](https://webassembly.org/). 
 
@@ -38,6 +38,8 @@ We have structured the project to allow a *git-less* use. The `app` directory is
 1. [Let's do some maths...](./step-01/)
 1. [Types, more functions...](./step-02/)
 1. [Hello WebAssembly](./step-03/)
+1. [Using WebAssembly Studio](./step-04/)
+1. [Using WebAssembly Studio - Conway's Game of Life](./step-05/)
 
 In each step directory you have a README file that explain the objective of the step, that you will do in the working directory `app`. If you have problems or if you get lost, you also have the solution of each step in the step directories. So if you want to see the intended result of  the 2nd step, you can point your browser to http://localhost:8000/step-02/index.html
 
