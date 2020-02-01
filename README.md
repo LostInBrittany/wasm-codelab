@@ -40,6 +40,7 @@ We have structured the project to allow a *git-less* use. The `app` directory is
 1. [Hello WebAssembly](./step-03/)
 1. [Using WebAssembly Studio](./step-04/)
 1. [Using WebAssembly Studio - Conway's Game of Life](./step-05/)
+1. [WebAssembly ❤️ Web Components - Part I](./step-06/)
 
 In each step directory you have a README file that explain the objective of the step, that you will do in the working directory `app`. If you have problems or if you get lost, you also have the solution of each step in the step directories. So if you want to see the intended result of  the 2nd step, you can point your browser to http://localhost:8000/step-02/index.html
 

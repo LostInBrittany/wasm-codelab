@@ -1,4 +1,4 @@
-#  JFokus 2020 WebAssembly Codelab - Step 04 - Using WebAssembly Studio - Conway's Game of Life
+#  JFokus 2020 WebAssembly Codelab - Step 05 - Using WebAssembly Studio - Conway's Game of Life
 
 In this step we are building a [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) demo, using an [AssemblyScript](https://github.com/AssemblyScript/assemblyscript) library.
 
