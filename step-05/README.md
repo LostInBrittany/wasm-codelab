@@ -247,9 +247,9 @@ async function loadAndInstantiate() {
     let arrayBuffer = await response.arrayBuffer();
     let wasmModule = await WebAssembly.instantiate(arrayBuffer, 
         { env: { memory: wasmMemory } });
-    initGame();
+    initGame(wasmModule);
 }
-loadAndInstantiate(wasmModule);
+loadAndInstantiate();
 ```
 
 And then the instantiation works as intended, and you have your Game of Life running locally:
