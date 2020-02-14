@@ -1,4 +1,4 @@
-#  JFokus 2020 WebAssembly Codelab - Step 03 - Hello WebAssembly
+#  DevFest Paris 2020 WebAssembly Codelab - Step 03 - Hello WebAssembly
 
 In this step we are going to add the first demo, *Hello WebAssembly*, our version of the Hello World.
 
@@ -164,10 +164,10 @@ Create a `HelloWebAssembly.html` file in the same `app/HelloWebAssembly` folder:
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JFokus 2020 WebAssembly Codelab - Hello WebAssembly</title>
+    <title>DevFest Paris 2020 WebAssembly Codelab - Hello WebAssembly</title>
 </head>
 <body>
-    <h1>JFokus 2020 WebAssembly Codelab</h1>
+    <h1>DevFest Paris 2020 WebAssembly Codelab</h1>
     <h2>Hello WebAssembly</h2>
     
     <p>
