@@ -1,4 +1,4 @@
-#  DevFest Paris 2020 WebAssembly Codelab - Step 01 - Let's do some maths
+#  JUG SummerCamp 2020 WebAssembly Codelab - Step 01 - Let's do some maths
 
 This is the initial step of the tutorial. In this step we will define some simple math functions in C, we will compile it in WASM and we will call them from JS.
 
@@ -11,10 +11,10 @@ For the moment you have an empty HTML page that will point to the different demo
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>DevFest Paris 2020 WebAssembly Codelab</title>
+    <title>JUG SummerCamp 2020 WebAssembly Codelab</title>
 </head>
 <body>
-    <h1>DevFest Paris 2020 WebAssembly Codelab</h1>
+    <h1>JUG SummerCamp 2020 WebAssembly Codelab</h1>
     
     <p>Here you have some WebAssembly demos:</p>
 
@@ -177,13 +177,13 @@ The all with a very minimalist layout (this isn't a CSS lab after all... 😉)
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
-    <title>DevFest Paris 2020 WebAssembly Codelab - Let's do some maths</title>
+    <title>JUG SummerCamp 2020 WebAssembly Codelab - Let's do some maths</title>
     <style>
         .row { margin: 16px; display: flex; flex-flow: row; }
     </style>
 </head>
 <body>
-    <h1>DevFest Paris 2020 WebAssembly Codelab</h1>
+    <h1>JUG SummerCamp 2020 WebAssembly Codelab</h1>
     <h2>Let's do some maths</h2>
     
     <div class="row">
