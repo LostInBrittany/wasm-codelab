@@ -1,4 +1,4 @@
-#  DevFest Paris 2020 WebAssembly Codelab - Step 07 - WebAssembly ❤️ Web Components - Part II
+#  JUG SummerCamp 2020 WebAssembly Codelab - Step 07 - WebAssembly ❤️ Web Components - Part II
 
 In this step we will encapsulate the Wasm file and the associated JavaScript of the Conway's Game of Life we did in [step 05](./step-05/) into a web component.
 
@@ -191,11 +191,11 @@ Let's add some of them to our page, on `index.html`:
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
-    <title>DevFest Paris 2020 WebAssembly Codelab - WebAssembly ❤️ Web Components - Part I</title>
+    <title>JUG SummerCamp 2020 WebAssembly Codelab - WebAssembly ❤️ Web Components - Part I</title>
     <script type="module" src="./GameOfLife/game-of-life.js"></script>
 </head>
 <body>
-    <h1>DevFest Paris 2020 WebAssembly Codelab</h1>
+    <h1>JUG SummerCamp 2020 WebAssembly Codelab</h1>
     <h2>WebAssembly ❤️ Web Components - Part I</h2>
 
     <game-of-life></game-of-life>

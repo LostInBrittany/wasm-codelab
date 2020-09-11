@@ -1,4 +1,4 @@
-#  DevFest Paris 2020 WebAssembly Codelab - Step 04 - Using WebAssembly Studio
+#  JUG SummerCamp 2020 WebAssembly Codelab - Step 04 - Using WebAssembly Studio
 
 [WebAssembly Studio](https://webassembly.studio/) is an online IDE for WASM that allows you to develop complete WASM projects in C/C++, Rust and AssemblyScript (TypeScript subset to generate WASM) in a simple way without installing anything in your workstation.
 

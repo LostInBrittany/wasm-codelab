@@ -1,4 +1,4 @@
-#  DevFest Paris 2020 WebAssembly Codelab - Step 02 - Types, more functions
+#  JUG SummerCamp 2020 WebAssembly Codelab - Step 02 - Types, more functions
 
 ## Types are important
 

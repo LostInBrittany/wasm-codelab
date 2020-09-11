@@ -1,4 +1,4 @@
-#  DevFest Paris 2020 WebAssembly Codelab - Step 06 - WebAssembly ❤️ Web Components - Part I
+#  JUG SummerCamp 2020 WebAssembly Codelab - Step 06 - WebAssembly ❤️ Web Components - Part I
 
 In the two following steps, we will use [Web Components](https://www.webcomponents.org/) to encapsulate the Wasm file and the associated JavaScript into a [custom element](https://html.spec.whatwg.org/multipage/custom-elements.html) easy and painless to use in any JS framework... or without any framework at all.
 
@@ -88,7 +88,7 @@ We are using an alternative, [snowpack](https://github.com/pikapkg/snowpack), to
 
 > **Note ⚠️**
 >
-> As of 2020-02-02, a bug appeared due to an update of `plugin-node-resolve`. The bug should be fixed in the comming days, but not in time for the lab at DevFest Paris 2020.
+> As of 2020-02-02, a bug appeared due to an update of `plugin-node-resolve`. The bug should be fixed in the comming days, but not in time for the lab at JUG SummerCamp 2020.
 > A workaround is to add a `snowpack` section to the `package.json`, with the following content:
 > ```
 >   "snowpack": {

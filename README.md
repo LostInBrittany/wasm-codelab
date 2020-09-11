@@ -1,4 +1,4 @@
-# DevFest Paris 2020 WebAssembly Codelab
+# JUG SummerCamp 2020 WebAssembly Codelab
 
 We have built this [WebAssembly Codelab](https://github.com/LostInBrittany/wasm-codelab) as a quick entry point to [WebAssembly](https://webassembly.org/). 
 
