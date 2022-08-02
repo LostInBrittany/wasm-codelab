@@ -9,7 +9,7 @@
         "lit-element": "^2.2.1"
     },
     "devDependencies": {
-        "snowpack": "^1.1.2"
+        "snowpack": "^3.8.8"
     },
     "snowpack": {
         "dedupe": []
